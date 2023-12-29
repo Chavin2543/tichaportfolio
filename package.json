@@ -1,0 +1,35 @@
+{
+  "name": "tailwindui-salient",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browserslist": "defaults, not ie <= 11",
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@headlessui/tailwindcss": "^0.2.0",
+    "@heroicons/react": "^2.0.18",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.523",
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.12",
+    "clsx": "^1.2.1",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.5.0",
+    "next": "13.4.16",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.16",
+    "prettier": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.5.2",
+    "sharp": "^0.32.0"
+  }
+}
