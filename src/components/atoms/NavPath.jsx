@@ -31,8 +31,8 @@ export function MainNavPath({ stepProgress, onStepClick }) {
 
     return (
       <div>
-        <div className="m-6 bg-transparent" aria-hidden="true">
-          <div className="overflow-hidden rounded-full bg-transparent">
+        <div className="bg-slate-900 pb-4" aria-hidden="true">
+          <div className="overflow-hidden rounded-full bg-slate-900">
             <div className="h-2 rounded-full bg-indigo-600 transition-all duration-300 ease-in-out" style={{ width: progressBarWidth }} />
           </div>
           <div className="mt-6 hidden grid-cols-4 text-sm font-medium sm:grid">

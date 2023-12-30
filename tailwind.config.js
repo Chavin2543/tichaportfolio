@@ -30,8 +30,11 @@ module.exports = {
       },
       maxWidth: {
         '2xl': '40rem',
-      },
+      }
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [
+    formsPlugin, headlessuiPlugin,
+    require("daisyui")
+  ],
 }

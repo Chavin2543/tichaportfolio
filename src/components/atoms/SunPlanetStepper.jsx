@@ -1,0 +1,42 @@
+export default function SunPlanetStepper({ isMainPath }) {
+  // Determine the current and completed steps based on isMainPath
+  const steps = [
+    { name: 'Understanding the sun', href: '#', status: 'complete' },
+    { name: 'Planetary exploration', href: '#', status: 'current' },
+  ]
+
+  // Find the current step to display its name
+  const currentStep = isMainPath ? steps[1] : steps[0];
+  const currentStepName = currentStep ? currentStep.name : 'Loading...';
+
+  return (
+    <nav className="bg-white flex items-center justify-center" aria-label="Progress">
+      <p className="text-sm font-medium">
+        {currentStepName}
+      </p>
+      <ol role="list" className="ml-8 flex items-center space-x-5">
+        {steps.map((step) => (
+          <li key={step.name}>
+            {step.status === 'complete' ? (
+              <a href={step.href} className="block h-2.5 w-2.5 rounded-full bg-indigo-600 hover:bg-indigo-900">
+                <span className="sr-only">{step.name}</span>
+              </a>
+            ) : step.status === 'current' ? (
+              <a href={step.href} className="relative flex items-center justify-center" aria-current="step">
+                <span className="absolute flex h-5 w-5 p-px" aria-hidden="true">
+                  <span className="h-full w-full rounded-full bg-indigo-200" />
+                </span>
+                <span className="relative block h-2.5 w-2.5 rounded-full bg-indigo-600" aria-hidden="true" />
+                <span className="sr-only">{step.name}</span>
+              </a>
+            ) : (
+              <a href={step.href} className="block h-2.5 w-2.5 rounded-full bg-gray-200 hover:bg-gray-400">
+                <span className="sr-only">{step.name}</span>
+              </a>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+}

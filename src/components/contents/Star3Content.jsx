@@ -2,7 +2,7 @@
 
 import { CheckCircleIcon, InformationCircleIcon } from "@heroicons/react/20/solid";
 
-export function Star2Content() {
+export function Star3Content() {
     return (
         <div className="bg-transparent py-24 sm:py-32 h-full">
             <div className="mx-auto max-w-7xl px-6 lg:px-8 h-full">
@@ -11,7 +11,7 @@ export function Star2Content() {
                     <div className="lg:pt-4 h-full">
                         <div className="px-6 py-32 lg:px-8 h-full overflow-auto">
                             <div className="mx-auto max-w-3xl rounded-3xl p-8 text-base leading-7 text-gray-700 bg-white">
-                                <p className="text-3xl font-semibold leading-7 text-indigo-600">Star2Content</p>
+                                <p className="text-3xl font-semibold leading-7 text-indigo-600">Star3Content</p>
                                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Self reflection and strategies moving forward</h1>
                                 <p className="mt-6 text-xl text-gray-900 leading-8">
                                     In the initial stage it is important for you to understand how your business operates, who are the customers and key stakholders and what are its short term and long term goals. This is to avoid adopting the latest technology trends blindly, as excessive innovation entails higher risks. Limiting any new enhancement or change to a certain level, taking it one step at a time, is always a good idea.

@@ -5,8 +5,10 @@ import Spline from '@splinetool/react-spline';
 import { Container } from './Container';
 import { Button } from './Button';
 import ReadingGuide from './ReadingGuide';
+import { LoadingScreen } from '../contents/LoadingScreen';
 
-export default function RocketPath({ stepProgress, setStepProgress, flagProgress, setFlagProgress, isMainPath }) {
+export default function RocketPath({ stepProgress, setStepProgress, flagProgress, setFlagProgress, isMainPath, setIsMainPath }) {
+    const [splineKey, setSplineKey] = useState(0);
     const splineRef = useRef();
 
     const rocketRef = useRef();
@@ -20,6 +22,7 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
 
     const [childrenOpacity, setChildrenOpacity] = useState(1);
     const [isGuideOpen, setGuideOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const handleSplineLoad = (spline) => {
         if (spline) {
@@ -36,8 +39,6 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
         const flag2Obj = spline.findObjectById("a2e3cd12-040b-4561-a770-23206869d6fd");
         const flag3Obj = spline.findObjectById("62273b53-c1e4-4357-99dd-d9c9f9c9db62");
 
-        console.log(sunObj);
-
         rocketRef.current = obj;
 
         milestoneRef.current = milestoneObj;
@@ -47,19 +48,18 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
         flag2Ref.current = flag2Obj
         flag3Ref.current = flag3Obj
         sunRef.current = sunObj
+
+        setIsLoading(false);
     }
 
-    const moveRocketUp = () => {
+    const moveRocketUp = (isFlag) => {
         if (!rocketRef.current || !splineRef.current) {
-            console.log("Rocket or Spline reference not set");
             return;
         }
 
-        console.log(rocketRef.current);
-
         let speed = 0;
         let maxSpeed = 5;
-        let acceleration = 30;
+        let acceleration = 20;
         let maxY = 2000;
         let opacity = 1;
 
@@ -86,23 +86,30 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
                 rocketRef.current.scale.z -= 0.008;
             }
 
-            if (rocketRef.current.position.y > maxY) { return }
-
-            requestAnimationFrame(animate);
+            if (rocketRef.current.position.y > maxY) { 
+                highlightFlag(1)
+                milestoneRef.current.visible = true;
+                flag1Ref.current.visible = false;
+                flag2Ref.current.visible = false;
+                flag3Ref.current.visible = false;
+        
+                if (isFlag == true) {
+                    setStepProgress(25);
+                } else {
+                    setIsMainPath(true);
+                    setFlagProgress(25);
+                }
+                return
+             } else {
+                requestAnimationFrame(animate);
+             }
         };
 
         requestAnimationFrame(animate);
-        highlightFlag(1)
-        milestoneRef.current.visible = true;
-        flag1Ref.current.visible = false;
-        flag2Ref.current.visible = false;
-        flag3Ref.current.visible = false;
-
-        setStepProgress(25);
     };
 
     const rotateSun = (progress) => {
-        sunRef.current.scale.set(1,1,1)
+        sunRef.current.scale.set(1, 1, 1)
         sunRef.current.rotation.z = 190
         let maxRotation = 40;
         let rotationProgression = 0;
@@ -128,10 +135,10 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
     const highlightFlag = (position) => {
         if (position == 1) {
             let targetScale = 30;
-            let targetZPosition = 0;
+            let targetZPosition = -1200;
             let currentZPosition = 5000;
 
-            flag1Ref.current.scale.set(targetScale,targetScale,targetScale)
+            flag1Ref.current.scale.set(targetScale, targetScale, targetScale)
             flag1Ref.current.position.z = currentZPosition;
             flag1Ref.current.visible = true
 
@@ -151,13 +158,19 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
                 }
             };
 
+            const rotateSlowly = () => {
+                flag1Ref.current.rotation.x += 0.0004
+                requestAnimationFrame(rotateSlowly);
+            }
+
             requestAnimationFrame(animate);
+            requestAnimationFrame(rotateSlowly);
         } else if (position == 2) {
             let targetScale = 15;
-            let targetZPosition = 0;
+            let targetZPosition = -1200;
             let currentZPosition = 5000;
 
-            flag2Ref.current.scale.set(targetScale,targetScale,targetScale)
+            flag2Ref.current.scale.set(targetScale, targetScale, targetScale)
             flag2Ref.current.position.z = currentZPosition;
             flag2Ref.current.visible = true
 
@@ -171,21 +184,26 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
             };
 
             const animate = () => {
-                console.log("animating flag2", flag2Ref.current.visible)
                 updateScaleAndPosition();
                 if (flag2Ref.current.position.z > targetZPosition) {
                     requestAnimationFrame(animate);
                 }
             };
 
+            const rotateSlowly = () => {
+                flag2Ref.current.rotation.x += 0.0004
+                requestAnimationFrame(rotateSlowly);
+            }
+
             requestAnimationFrame(animate);
+            requestAnimationFrame(rotateSlowly);
 
         } else if (position == 3) {
             let targetScale = 15;
-            let targetZPosition = 0;
+            let targetZPosition = -1200;
             let currentZPosition = 5000;
 
-            flag3Ref.current.scale.set(targetScale,targetScale,targetScale)
+            flag3Ref.current.scale.set(targetScale, targetScale, targetScale)
             flag3Ref.current.position.z = currentZPosition;
             flag3Ref.current.visible = true
 
@@ -205,9 +223,20 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
                 }
             };
 
+            const rotateSlowly = () => {
+                flag3Ref.current.rotation.x += 0.0004
+                requestAnimationFrame(rotateSlowly);
+            }
+
             requestAnimationFrame(animate);
+            requestAnimationFrame(rotateSlowly)
         }
     }
+
+    const resetSplineScene = () => {
+        setSplineKey(prevKey => prevKey + 1);
+        // Reset other relevant states here
+    };    
 
     useEffect(() => {
         if (flagProgress > 0) {
@@ -218,12 +247,20 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
             } else if (flagProgress == 75) {
                 highlightFlag(3);
             }
+        } else if (flagProgress == 0) {
+            setChildrenOpacity(1);
+            setIsLoading(true);
+            resetSplineScene();
         }
     }, [flagProgress]);
 
     useEffect(() => {
         if (stepProgress > 0) {
             rotateSun(stepProgress);
+        } else if (stepProgress == 0) {
+            setChildrenOpacity(1);
+            setIsLoading(true);
+            resetSplineScene();
         }
     }, [stepProgress]);
 
@@ -248,7 +285,13 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
 
     return (
         <div className='relative w-screen h-screen'>
+            {isLoading && (
+                <div className='fixed top-0 left-0 right-0 right-0'>
+                    <LoadingScreen />
+                </div>
+            )}
             <Spline
+                key={splineKey}
                 ref={splineRef}
                 scene="https://prod.spline.design/wj9ve2VdpbLDdQJN/scene.splinecode"
                 onLoad={handleSplineLoad}
@@ -271,18 +314,23 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
                     </p>
                     <div className="mt-10 flex justify-center gap-x-6">
                         <Button
-                            onClick={moveRocketUp}
+                            onClick={() => { setGuideOpen(true) }}
                         >
-                            <span className="">What we do ?</span>
+                            <span className="">Reading Guide</span>
                         </Button>
                         <Button
-                            onClick={moveRocketUp}
+                            onClick={() => { moveRocketUp(true) }}
                         >
-                            <span className="">Launch the rocket !</span>
+                            <span className="">Understanding the sun</span>
+                        </Button>
+                        <Button
+                            onClick={() => { moveRocketUp(false) }}
+                        >
+                            <span className="">Launch planetary exploration</span>
                         </Button>
                     </div>
                 </Container>
-                {isGuideOpen && <ReadingGuide onClose={() => { setGuideOpen(false) }} />}
+                {isGuideOpen && <ReadingGuide open={isGuideOpen} setOpen={setGuideOpen} />}
             </div>
         </div>
     );

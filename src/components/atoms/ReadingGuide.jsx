@@ -2,14 +2,12 @@ import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/24/outline'
 
-export default function ReadingGuide() {
-  const [open, setOpen] = useState(true)
-
+export default function ReadingGuide({open, setOpen}) {
   const cancelButtonRef = useRef(null)
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={(setOpen)}>
+      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={() => setOpen(false)}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -33,19 +31,31 @@ export default function ReadingGuide() {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-slate-900 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
                 <div>
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                     <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
                   </div>
                   <div className="mt-3 text-center sm:mt-5">
-                    <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
+                    <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-white">
                       Reading Guide
                     </Dialog.Title>
                     <div className="mt-2">
-                      <p className="text-sm text-gray-500">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo
-                        pariatur iste dolorem animi vitae error totam. At sapiente aliquam accusamus facere veritatis.
+                      <p className="text-sm text-gray-500 text-left">
+                        We will take you through a 4 steps journey starting from planet xx to planet xx:
+                        <ol class="list-decimal text-left">
+                          <li>Self reflection and strategies moving forward</li>
+                          <li>Business process and technology assessment</li>
+                          <li>Defining Target state and gaps</li>
+                          <li>Building blocks to a successful implementation</li>
+                        </ol>
+                        You can visit and equip yourself with background knowledge on the basics of digital transformation and today’s technology landscape by visiting the sun:
+                        <ul class="list-disc ml-5">
+                          <li>Understanding Digital transformation</li>
+                          <li>Emerging technologies</li>
+                          <li>Useful tools</li>
+                        </ul>
+                        Our astronaut will guide you through the journey and if you have any questions feel free to click on the astronaut for our contact information.
                       </p>
                     </div>
                   </div>
@@ -56,18 +66,11 @@ export default function ReadingGuide() {
                     className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2"
                     onClick={() => setOpen(false)}
                   >
-                    Deactivate
-                  </button>
-                  <button
-                    type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0"
-                    onClick={() => setOpen(false)}
-                    ref={cancelButtonRef}
-                  >
-                    Cancel
+                    Okay, I understand.
                   </button>
                 </div>
               </Dialog.Panel>
+
             </Transition.Child>
           </div>
         </div>

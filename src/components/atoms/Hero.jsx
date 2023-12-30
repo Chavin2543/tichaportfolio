@@ -27,7 +27,7 @@ export function Hero() {
           Most bookkeeping software is accurate, but hard to use. We make the
           opposite trade-off, and hope you don’t get audited.
         </p>
-        <div className="mt-10 flex justify-center gap-x-6">
+        <div className="mt-10 flex justify-center px-6">
           <Button onClick={() => { setGuideOpen(true) }}>Reading Guide</Button>
           <Button variant="outline">
             <span className="">Start Journey</span>

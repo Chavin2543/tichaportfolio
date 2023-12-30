@@ -80,7 +80,7 @@ export function Flag3Content() {
     ]
 
     return (
-        <div className="bg-transparent w-full h-full">
+        <div className="bg-transparent h-full pt-6">
             <div className="mx-auto max-w-7xl h-full px-6 lg:px-8 flex items-center justify-center">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 overflow-auto">
                     <div className="lg:pr-8 lg:pt-4">
