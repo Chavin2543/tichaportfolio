@@ -42,11 +42,12 @@ export default function ReadingGuide({open, setOpen}) {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500 text-left">
-                        We will walk you through a 4 steps journey, planetary exploration, starting from planet AX1 to planet AX4:
+                        We will walk you through a 5 steps journey through planetary exploration, starting from planet AX1 to planet AX5:
                           <li>AX1: Self reflection and strategies moving forward</li>
                           <li>AX2: Business process and technology assessment</li>
                           <li>AX3: Defining Target state and gaps</li>
-                          <li>AX4: Building blocks to a successful implementation</li>
+                          <li>AX4: Prioritizing projects</li>
+                          <li>AX5: Building blocks to a successful implementation</li>
                         You can visit and equip yourself with background knowledge on the basics of digital transformation and today’s technology landscape by visiting the sun:
                         <ul class="list-disc ml-5">
                           <li>Understanding Digital transformation</li>

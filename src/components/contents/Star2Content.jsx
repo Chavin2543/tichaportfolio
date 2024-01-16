@@ -11,7 +11,7 @@ export function Star2Content() {
                     <div className="lg:pt-4 h-full">
                         <div className="px-6 py-32 lg:px-8 h-full overflow-auto">
                             <div className="mx-auto max-w-3xl rounded-3xl p-8 text-base leading-7 text-gray-700 bg-white">
-                                <p className="text-3xl font-semibold leading-7 text-indigo-900">Planet 002</p>
+                                <p className="text-3xl font-semibold leading-7 text-indigo-900">Planet AX2</p>
                                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">TECHNOLOGY ASSESSMENT</h1>
                                 <p className="mt-6 text-xl text-gray-900 leading-8">
                                 There are many aspects in assessing a company's technology capabilities which would depend on the company’s current technology stack. Generally companies would assess their technology capabilities in terms of data, infrastructure, security, integration, etc. However, on a high-level, the process of as-is state analysis is as follows:

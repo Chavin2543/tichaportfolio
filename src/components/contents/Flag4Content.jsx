@@ -13,14 +13,14 @@ export function Flag4Content({ setIsMainPath, setFlagProgress }) {
                 </span>
             </h1>
             <p className="mx-auto text-white mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-            it&apos;s time to move to the next planet
+            it&apos;s time to explore the planets
             </p>
             <div className="mt-10 flex justify-center gap-x-6">
                 <Button onClick={() => {
                     setIsMainPath(true);
                     setFlagProgress(20);
                 }}>
-                    <span className="">Next Planet</span>
+                    <span className="">Start Planetary Exploration </span>
                 </Button>
             </div>
         </Container>

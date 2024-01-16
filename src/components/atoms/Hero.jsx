@@ -17,9 +17,9 @@ export function Hero() {
     <Roadmap>
       <Container className="flex flex-col justify-center items-center h-full py-16 lg:py-32 text-center">
         <h1 className="font-display text-white text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-          Accounting{' '}
+        Elevate your business to new heights: {' '}
           <span className="relative whitespace-nowrap text-indigo-600">
-            <span className="relative">made simple</span>
+            <span className="relative">SME to the Moon</span>
           </span>
           {' '}for small businesses.
         </h1>

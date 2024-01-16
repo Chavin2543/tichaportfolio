@@ -11,7 +11,7 @@ export function Star1Content() {
                     <div className="lg:pt-4 h-full">
                         <div className="px-6 py-32 lg:px-8 h-full overflow-auto">
                             <div className="mx-auto max-w-3xl rounded-3xl p-8 text-base leading-7 text-gray-700 bg-white">
-                                <p className="text-3xl font-semibold leading-7 text-indigo-900">Planet 001</p>
+                                <p className="text-3xl font-semibold leading-7 text-indigo-900">Planet AX1</p>
                                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">SELF REFLECTION & STRATEGIES MOVING FORWARD</h1>
                                 <p className="mt-6 text-xl text-gray-900 leading-8">
                                     In the initial stage it is important for you to understand how your business operates, who are the customers and key stakholders and what are its short term and long term goals. This is to avoid adopting the latest technology trends blindly, as excessive innovation entails higher risks. Limiting any new enhancement or change to a certain level, taking it one step at a time, is always a good idea.
