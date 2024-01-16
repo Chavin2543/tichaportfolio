@@ -1,13 +1,21 @@
 export default function SunPlanetStepper({ isMainPath }) {
   // Determine the current and completed steps based on isMainPath
-  const steps = [
-    { name: 'Understanding the sun', href: '#', status: 'complete' },
-    { name: 'Planetary exploration', href: '#', status: 'current' },
+  let steps = [
+    { name: 'Understanding the sun', href: '#', status: 'current' },
+    { name: 'Planetary exploration', href: '#', status: 'future' },
   ]
 
   // Find the current step to display its name
   const currentStep = isMainPath ? steps[1] : steps[0];
   const currentStepName = currentStep ? currentStep.name : 'Loading...';
+
+  steps = steps.map((step, stepIndex) => ({
+    name: step.name,
+    href: step.href,
+    status: step === currentStep ? 'current' : 'future',
+  }));
+  
+
 
   return (
     <nav className="bg-white flex items-center justify-center" aria-label="Progress">

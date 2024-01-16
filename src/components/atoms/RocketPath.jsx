@@ -97,7 +97,7 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
                     setStepProgress(25);
                 } else {
                     setIsMainPath(true);
-                    setFlagProgress(25);
+                    setFlagProgress(20);
                 }
                 return
              } else {
@@ -235,16 +235,15 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
 
     const resetSplineScene = () => {
         setSplineKey(prevKey => prevKey + 1);
-        // Reset other relevant states here
     };    
 
     useEffect(() => {
         if (flagProgress > 0) {
-            if (flagProgress == 25) {
+            if (flagProgress == 20) {
                 highlightFlag(1);
-            } else if (flagProgress == 50) {
+            } else if (flagProgress == 40) {
                 highlightFlag(2);
-            } else if (flagProgress == 75) {
+            } else if (flagProgress == 60) {
                 highlightFlag(3);
             }
         } else if (flagProgress == 0) {
@@ -266,7 +265,7 @@ export default function RocketPath({ stepProgress, setStepProgress, flagProgress
 
     useEffect(() => {
         if (isMainPath) {
-            setFlagProgress(25);
+            setFlagProgress(20);
             if (flagProgress > 0) {
                 sunRef.current.visible = false
                 flag1Ref.current.visible = true

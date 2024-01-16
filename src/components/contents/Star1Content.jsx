@@ -11,19 +11,22 @@ export function Star1Content() {
                     <div className="lg:pt-4 h-full">
                         <div className="px-6 py-32 lg:px-8 h-full overflow-auto">
                             <div className="mx-auto max-w-3xl rounded-3xl p-8 text-base leading-7 text-gray-700 bg-white">
-                                <p className="text-3xl font-semibold leading-7 text-indigo-600">Introducing</p>
-                                <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Self reflection and strategies moving forward</h1>
+                                <p className="text-3xl font-semibold leading-7 text-indigo-900">Planet 001</p>
+                                <h1 className="mt-2 text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">SELF REFLECTION & STRATEGIES MOVING FORWARD</h1>
                                 <p className="mt-6 text-xl text-gray-900 leading-8">
                                     In the initial stage it is important for you to understand how your business operates, who are the customers and key stakholders and what are its short term and long term goals. This is to avoid adopting the latest technology trends blindly, as excessive innovation entails higher risks. Limiting any new enhancement or change to a certain level, taking it one step at a time, is always a good idea.
                                 </p>
                                 <div className="mt-10 max-w-2xl">
                                     <p className="text-3xl font-semibold leading-7 text-indigo-600">Self reflection</p>
-                                    <p>
-                                        In order to identify relevant tools and technology and form the company&apos;s short-term and long-term vision it is imperative to understand the how the company currently operates being
-                                        Current state of operations and performance
+                                    <p className = "mt-3">
+                                        In order to identify relevant tools and technology and form the company&apos;s short-term and long-term vision it is imperative to understand the how the company currently operates being:
+                                        <p className="mt-5 text-xl font-semibold leading-7 text-gray-900">
+                                            Current state of operations and performance</p>
+                                            <p className ="mt-3 font-semibold">
+                                            Action:</p>
 
                                     </p>
-                                    <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
+                                    <ul role="list" className="mt-3 max-w-xl space-y-8 text-gray-600">
                                         <li className="flex gap-x-3">
                                             <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                             <span>
@@ -46,11 +49,68 @@ export function Star1Content() {
                                             </span>
                                         </li>
                                     </ul>
-                                    <p className="mt-8">
-                                        Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
-                                        fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                                        adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                                    </p>
+
+                                    <p className="mt-8 text-xl font-semibold leading-7 text-gray-900">
+                                    Existing strategy and plans </p>
+                                    <p className ="mt-3 font-semibold">
+                                            Action:</p>
+                                            <ul role="list" className="mt-3 max-w-xl space-y-8 text-gray-600">
+                                        <li className="flex gap-x-3">
+                                            <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                            <span>
+                                                <strong className="font-semibold text-gray-900">Conduct interviews with key stakeholders  </strong>
+                                                to develop understanding of current strategy
+                                            </span>
+                                        </li>
+                                        <li className="flex gap-x-3">
+                                            <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                            <span>
+                                                <strong className="font-semibold text-gray-900">Gather information </strong>
+                                                and data on the current business strategy including
+                                            </span>
+                                        </li>
+                                        <li>&ensp; &ensp; &ensp;Priority areas</li>
+                                        <li>&ensp; &ensp; &ensp;Operational improvements/ Restructuring</li>
+                                        <li>&ensp; &ensp; &ensp;Related KPIs and associated achievements</li>
+                                        <li className="flex gap-x-3">
+                                            <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                            <span>
+                                                <strong className="font-semibold text-gray-900"> Review & analyze </strong>
+                                                for a deeper understanding of current strategy and identifying the improvement areas 
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <p className="mt-10 text-3xl font-semibold leading-7 text-indigo-600">Strategy formulation</p>
+                                    <p className = "mt-3">
+                                    Define vision and strategic and priorities which can includes the following activities</p>
+                                    <li className="mt-5 flex gap-x-3"><CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <span><strong>Conduct a SWOT analysis </strong> from the outcome from self reflection stage </span>
+                                    </li>
+                                    <li className="mt-3 flex gap-x-3"><CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <span><strong>Conduct an initial workshop</strong> with key stakeholders to define the basis for developing future business strategy</span>
+                                    </li>
+                                    <li className="mt-3 flex gap-x-3"><CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <span><strong>Summarize and refine </strong>outcomes, vision and mission statements</span>
+                                    </li>
+                                    <li className="mt-3 flex gap-x-3"><CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <span><strong>Finalize the vision/mission statements</strong> and the strategic priorities by identifying corresponding objectives to discuss in the second workshop </span>
+                                    </li>
+
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+                                    
                                     <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">From beginner to expert in 3 hours</h2>
                                     <p className="mt-6">
                                         Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.

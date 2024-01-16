@@ -24,9 +24,6 @@ export default function ToolSlideOver({ tool, slideOverOpen, setSlideOverOpen })
                   <div className="flex h-full flex-col overflow-y-scroll bg-white rounded-tl-3xl rounded-bl-3xl shadow-xl">
                     <div className="px-4 py-6 sm:px-6">
                       <div className="flex items-start justify-between">
-                        <h2 id="slide-over-heading" className="text-base font-semibold leading-6 text-gray-900">
-                          Profile
-                        </h2>
                         <div className="ml-3 flex h-7 items-center">
                           <button
                             type="button"
@@ -58,14 +55,6 @@ export default function ToolSlideOver({ tool, slideOverOpen, setSlideOverOpen })
                                   <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">{tool?.name ?? ""}</h3>
                                 </div>
                               </div>
-                              <div className="mt-5 flex flex-wrap space-y-3 sm:space-x-3 sm:space-y-0">
-                                <button
-                                  type="button"
-                                  className="inline-flex w-full flex-shrink-0 items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:flex-1"
-                                >
-                                  Visit Site
-                                </button>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -74,7 +63,7 @@ export default function ToolSlideOver({ tool, slideOverOpen, setSlideOverOpen })
                         <dl className="space-y-8 px-4 sm:space-y-6 sm:px-6">
                           <div>
                             <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">Description</dt>
-                            <dd className="mt-1 text-sm text-gray-900 sm:col-span-2">
+                            <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 whitespace-pre-line">
                               <p>
                                 {tool?.description ?? "Invalid description"}
                               </p>

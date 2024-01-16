@@ -42,13 +42,11 @@ export default function ReadingGuide({open, setOpen}) {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500 text-left">
-                        We will take you through a 4 steps journey starting from planet xx to planet xx:
-                        <ol class="list-decimal text-left">
-                          <li>Self reflection and strategies moving forward</li>
-                          <li>Business process and technology assessment</li>
-                          <li>Defining Target state and gaps</li>
-                          <li>Building blocks to a successful implementation</li>
-                        </ol>
+                        We will walk you through a 4 steps journey, planetary exploration, starting from planet AX1 to planet AX4:
+                          <li>AX1: Self reflection and strategies moving forward</li>
+                          <li>AX2: Business process and technology assessment</li>
+                          <li>AX3: Defining Target state and gaps</li>
+                          <li>AX4: Building blocks to a successful implementation</li>
                         You can visit and equip yourself with background knowledge on the basics of digital transformation and today’s technology landscape by visiting the sun:
                         <ul class="list-disc ml-5">
                           <li>Understanding Digital transformation</li>
@@ -66,7 +64,7 @@ export default function ReadingGuide({open, setOpen}) {
                     className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2"
                     onClick={() => setOpen(false)}
                   >
-                    Okay, I understand.
+                    Start!
                   </button>
                 </div>
               </Dialog.Panel>

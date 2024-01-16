@@ -51,10 +51,11 @@ export default function Home() {
         )}
         {flagProgress > 0 && isMainPath && (
           <div className='fixed w-full h-full flex justify-center items-center z-20 overflow-auto'>
-            {flagProgress <= 25 && <Star1Content />}
-            {flagProgress > 25 && flagProgress <= 50 && <Star2Content />}
-            {flagProgress > 50 && flagProgress <= 75 && <Star3Content />}
-            {flagProgress > 75 && <Star4Content />}
+            {flagProgress <= 20 && <Star1Content />}
+            {flagProgress > 20 && flagProgress <= 40 && <Star2Content />}
+            {flagProgress > 40 && flagProgress <= 60 && <Star3Content />}
+            {flagProgress > 60 && flagProgress <= 80 && <Star3Content />}
+            {flagProgress > 100 && <Star4Content />}
           </div>
         )}
 
@@ -89,12 +90,12 @@ export default function Home() {
         {((isMainPath && flagProgress > 0) || (!isMainPath && stepProgress > 0)) && (
           <div className='fixed bottom-0 right-0 z-50'>
             <Controls
-              showBack={isMainPath ? flagProgress == 25 ? false : true : stepProgress == 25 ? false : true}
+              showBack={isMainPath ? flagProgress == 20 ? false : true : stepProgress == 25 ? false : true}
               showNext={isMainPath ? flagProgress == 100 ? false : true : stepProgress == 100 ? false : true}
               onBack={() => {
                 if (isMainPath) {
                   if (flagProgress > 0) {
-                    setFlagProgress(flagProgress - 25)
+                    setFlagProgress(flagProgress - 20)
                   }
                 } else {
                   if (stepProgress > 25) {
@@ -105,7 +106,7 @@ export default function Home() {
               onNext={() => {
                 if (isMainPath) {
                   if (flagProgress < 100) {
-                    setFlagProgress(flagProgress + 25)
+                    setFlagProgress(flagProgress + 20)
                   }
                 } else {
                   if (stepProgress < 100) {
