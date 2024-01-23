@@ -14,6 +14,7 @@ import { Star1Content } from '@/components/contents/Star1Content';
 import { Star2Content } from '@/components/contents/Star2Content';
 import { Star3Content } from '@/components/contents/Star3Content';
 import { Star4Content } from '@/components/contents/Star4Content';
+import { Star5Content } from '@/components/contents/Star5Content';
 import { HomeIcon } from '@heroicons/react/20/solid';
 import { useState } from 'react';
 import Draggable from 'react-draggable';
@@ -54,8 +55,8 @@ export default function Home() {
             {flagProgress <= 20 && <Star1Content />}
             {flagProgress > 20 && flagProgress <= 40 && <Star2Content />}
             {flagProgress > 40 && flagProgress <= 60 && <Star3Content />}
-            {flagProgress > 60 && flagProgress <= 80 && <Star3Content />}
-            {flagProgress > 100 && <Star4Content />}
+            {flagProgress > 60 && flagProgress <= 80 && <Star4Content />}
+            {flagProgress == 100 && <Star5Content />}
           </div>
         )}
 

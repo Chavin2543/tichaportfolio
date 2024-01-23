@@ -14,7 +14,7 @@ export function Star5Content() {
                                 <p className="text-3xl font-semibold leading-7 text-indigo-900">Planet AX5</p>
                                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">PRIORITIZING PROJECTS</h1>
                                 <p className="mt-6 text-xl text-gray-900 leading-8">
-                                Once the company has compiled a list of projects necessary to attain its desired future state, the next step involves prioritizing the sequence in which these projects will be undertaken                                </p>
+                                Star 5 Once the company has compiled a list of projects necessary to attain its desired future state, the next step involves prioritizing the sequence in which these projects will be undertaken                                </p>
                                 
                                 <p className ="mt-5 font-semibold">
                                             Action:</p>

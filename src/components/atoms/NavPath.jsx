@@ -40,7 +40,7 @@ export function MainNavPath({ stepProgress, onStepClick }) {
             <div className={getStepClassName(40)} onClick={() => onStepClick(40)}>Technology Assessment</div>
             <div className={getStepClassName(60)} onClick={() => onStepClick(60)}>Defining Target state and gaps</div>
             <div className={getStepClassName(80)} onClick={() => onStepClick(80)}>Prioritizing projects</div>
-            <div className={getStepClassName(100)} onClick={() => onStepClick(100)}>Prioritizing projects</div>
+            <div className={getStepClassName(100)} onClick={() => onStepClick(100)}>Flag5</div>
           </div>
         </div>
       </div>
