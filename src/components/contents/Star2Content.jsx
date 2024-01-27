@@ -24,7 +24,7 @@ export function Star2Content() {
                                 <li className="mt-5 flex gap-x-3"><CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                     <span><strong>Store all application information in a common repository </strong>  so there is one single source of truth and information is easy to analyze for gaps </span>
                                     </li>
-                                <p className="mt-8 text-gray-500"> <em>Note: For smaller SMEs you can access the technologies you are currently using and document it down in a  centralized repository 
+                                <p className="mt-8 text-gray-500"> <em>Note: For smaller SMEs you can assess the technologies you are currently using and document it down in a  centralized repository 
                                 </em></p>
 
                             

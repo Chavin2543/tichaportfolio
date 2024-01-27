@@ -40,21 +40,26 @@ export default function ReadingGuide({open, setOpen}) {
                     <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-white">
                       Reading Guide
                     </Dialog.Title>
-                    <div className="mt-2">
+                    <div className="mt-5">
                       <p className="text-sm text-gray-500 text-left">
                         We will walk you through a 5 steps journey through planetary exploration, starting from planet AX1 to planet AX5:
+                        <ul class="list-disc ml-10">
                           <li>AX1: Self reflection and strategies moving forward</li>
                           <li>AX2: Business process and technology assessment</li>
                           <li>AX3: Defining Target state and gaps</li>
                           <li>AX4: Prioritizing projects</li>
                           <li>AX5: Building blocks to a successful implementation</li>
+                          </ul>
+                          </p>
+                    </div>
+                    <div className="mt-5">
+                    <p className="text-sm text-gray-500 text-left">
                         You can visit and equip yourself with background knowledge on the basics of digital transformation and today’s technology landscape by visiting the sun:
-                        <ul class="list-disc ml-5">
+                        <ul class="list-disc ml-10">
                           <li>Understanding Digital transformation</li>
                           <li>Emerging technologies</li>
                           <li>Useful tools</li>
                         </ul>
-                        Our astronaut will guide you through the journey and if you have any questions feel free to click on the astronaut for our contact information.
                       </p>
                     </div>
                   </div>

@@ -17,21 +17,21 @@ export function Star3Content() {
                                 Defining target state and identifying gaps is a strategic process for the company to outline its desired future state and assess the existing gaps or differences between the current state and this envisioned future state.                                </p>
                                 <p className ="mt-5 font-semibold">
                                             Action:</p>
-                                            <ul role="list" className="mt-3 max-w-xl space-y-8 text-gray-600">
+                                            <ul role="list" className="mt-5 max-w-xl space-y-8 text-gray-600">
                                         <li className="flex gap-x-3">
-                                            <CheckCircleIcon className="h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                            <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                             Prioritize pain points 
                                         </li>
                                         <li className="flex gap-x-3">
-                                            <CheckCircleIcon className="h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                            <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                             Benchmark with companies with similar business models
                                         </li>
                                         <li className="flex gap-x-3">
-                                            <CheckCircleIcon className="h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                            <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                             <span>Painpoints gathered in the <strong>First two stages + Future vision  + benchmarking = Opportunities for modernisation and target state</strong> </span>
                                         </li>
                                         <li className="flex gap-x-3">
-                                            <CheckCircleIcon className="h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                            <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                                             Identify gaps or difference between current and designed target state
                                         </li>
                                        
