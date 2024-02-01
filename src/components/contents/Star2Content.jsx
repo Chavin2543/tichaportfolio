@@ -14,7 +14,7 @@ export function Star2Content() {
                                 <p className="text-3xl font-semibold leading-7 text-indigo-900">Planet AX2</p>
                                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">TECHNOLOGY ASSESSMENT</h1>
                                 <p className="mt-6 text-xl text-gray-900 leading-8">
-                                There are many aspects in assessing a company's technology capabilities which would depend on the company’s current technology stack. Generally companies would assess their technology capabilities in terms of data, infrastructure, security, integration, etc. However, on a high-level, the process of as-is state analysis is as follows:
+                                There are many aspects in assessing a company&apos;s technology capabilities which would depend on the company’s current technology stack. Generally companies would assess their technology capabilities in terms of data, infrastructure, security, integration, etc. However, on a high-level, the process of as-is state analysis is as follows:
 
                                 </p>
                                 <li className="mt-8 flex gap-x-3"><CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
