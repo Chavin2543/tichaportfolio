@@ -84,7 +84,7 @@ export function Flag2Content() {
                     <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 gap-x-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
 
                         {tools.map((tool) => (
-                            <span onClick={() => handleToolClick(tool)} className="bg-white inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-l text-bold font-medium text-black ring-1 ring-inset ring-white hover:bg-gray-600">
+                            <span key={tool.name} onClick={() => handleToolClick(tool)} className="bg-white inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-l text-bold font-medium text-black ring-1 ring-inset ring-white hover:bg-gray-600">
                                 <svg className="h-1.5 w-1.5 fill-red-400" viewBox="0 0 6 6" aria-hidden="true">
                                     <circle cx={3} cy={3} r={3} />
                                 </svg>

@@ -49,7 +49,7 @@ export function Star5Content() {
                                 <p className ="mt-5 text-3xl font-semibold text-indigo-600">
                                             2. Risk Management</p>
                                             <p className="mt-5 max-w-xl text-gray-600 leading-8">
-                                            When going through with a project it is normal to face some risks that might impact the project's delivery therefore it is important to have a continuous and standardized process to ensure that risks are identified, prioritized, analyzed, acted upon and reported.</p>
+                                            When going through with a project it is normal to face some risks that might impact the project&apos;s delivery therefore it is important to have a continuous and standardized process to ensure that risks are identified, prioritized, analyzed, acted upon and reported.</p>
 
 
                                  <p className ="mt-5 text-3xl font-semibold text-indigo-600">
@@ -104,7 +104,7 @@ export function Star5Content() {
                                              Change management involvement through 3 key focus areas: </p>
                                              <li className="mt-3 flex gap-x-3">
                                             <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                                            <span><strong>Leadership:</strong> Leaders are unified in their commitment to the project's goals and actively support both the project itself and the staff, encouraging attendance and adoption of new project guidelines
+                                            <span><strong>Leadership:</strong> Leaders are unified in their commitment to the project&apos;s goals and actively support both the project itself and the staff, encouraging attendance and adoption of new project guidelines
                                             </span></li>
                                             <li className="mt-3 flex gap-x-3">
                                             <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
